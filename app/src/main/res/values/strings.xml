@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CoroutinePractise</string>
     <string name="run_blocking">Run Blocking</string>
+    <string name="asyncawait">Async Await</string>
 </resources>
