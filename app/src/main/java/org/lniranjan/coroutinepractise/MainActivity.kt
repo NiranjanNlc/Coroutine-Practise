@@ -41,6 +41,5 @@ class MainActivity : AppCompatActivity() {
     }
     suspend fun doNetworkCall2(): String {
         return " network call 2" 
-        } 
-    }
+        }
 }
