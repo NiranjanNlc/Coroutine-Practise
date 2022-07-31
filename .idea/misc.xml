@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_async_await.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_job.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_life_cycle_view_modal.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_run_blocking.xml" value="0.18072916666666666" />
       </map>
     </option>
