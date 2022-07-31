@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="run_blocking">Run Blocking</string>
+    <string name="asyncawait">Async Await</string>
 </resources>
