@@ -11,9 +11,9 @@ class JobActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_job)
         //Ilustratio of job
-       // illustrateJob()
+        illustrateJob()
         //Illustrate of is active
-//        isActiveJob()
+        isActiveJob()
         withTimeOutJob()
     }
 
