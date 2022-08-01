@@ -13,7 +13,25 @@ class JobActivity : AppCompatActivity() {
         //Ilustratio of job
        // illustrateJob()
         //Illustrate of is active
-        isActiveJob()
+//        isActiveJob()
+        withTimeOutJob()
+    }
+
+    private fun withTimeOutJob() {
+        val job = GlobalScope.launch {
+           withTimeout(4000)
+           {
+               for (i in 20..60) {
+                   delay(1000)
+                   Log.d(" factiorail of $i", getFactorial(i).toString())
+               }
+           }
+        }
+        runBlocking {
+            delay(5000)
+            if (job.isCancelled)
+            Log.d(TAG," time out of job")
+        }
     }
 
     private fun isActiveJob() {
