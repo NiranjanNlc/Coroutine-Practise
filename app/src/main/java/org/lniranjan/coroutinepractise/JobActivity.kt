@@ -3,10 +3,7 @@ package org.lniranjan.coroutinepractise
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 class JobActivity : AppCompatActivity() {
     val TAG = "JObActivity"
@@ -14,7 +11,34 @@ class JobActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_job)
         //Ilustratio of job
-        illustrateJob()
+       // illustrateJob()
+        //Illustrate of is active
+        isActiveJob()
+    }
+
+    private fun isActiveJob() {
+        val job = GlobalScope.launch {
+           for ( i in 20 .. 60 )
+           {
+               delay(1000)
+               if (isActive)
+               Log.d(" factiorail of $i", getFactorial(i).toString())
+           }
+        }
+        runBlocking {
+            Log.d(TAG, " run blockin of the job ")
+            delay(6000)
+            job.cancel()
+            Log.d(TAG, " run blockin of the job  canceled ")
+        }
+        Log.d(TAG, " End of everything ")
+    }
+
+    fun getFactorial(num: Int): Long {
+        if (num >= 1)
+            return num * getFactorial(num - 1)
+        else
+            return 1
     }
 
     private fun illustrateJob() {
