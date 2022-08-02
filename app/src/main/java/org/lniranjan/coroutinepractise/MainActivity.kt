@@ -28,5 +28,6 @@ class MainActivity : AppCompatActivity() {
     suspend fun doNetworkCall2(): String {
         delay(3000)
         return " network call 1"
+        }
     }
 }
