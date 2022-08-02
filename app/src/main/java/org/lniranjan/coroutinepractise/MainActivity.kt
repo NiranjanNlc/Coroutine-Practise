@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         return " network call 1"
     }
     suspend fun doNetworkCall2(): String {
-        delay(3000)
-        return " network call 2"
+        return " network call 2" 
+        } 
     }
 }
